@@ -14,12 +14,16 @@ let package = Package(
     products: [
         .library(
             name: "MapboxCoreMaps",
-            targets: ["MapboxCoreMaps"]),
+            targets: ["MapboxCoreMapsWrapper"]),
     ],
     dependencies: [
-        .package(name: "MapboxCommon", url: "git@github.com:mapbox/mapbox-common-ios.git", from: "10.0.0-beta.6"),
+        .package(name: "MapboxCommon", url: "https://github.com/mapbox/mapbox-common-ios.git", from: "10.0.0-beta.6"),
     ],
     targets: [
+        .target(
+            name: "MapboxCoreMapsWrapper",
+            dependencies: ["MapboxCommon", "MapboxCoreMaps"]
+        ),
         registry.mapboxCoreMapsTarget(version: version, checksum: checksum),
     ],
     cxxLanguageStandard: .cxx14
