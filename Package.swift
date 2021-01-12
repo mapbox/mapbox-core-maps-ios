@@ -25,8 +25,7 @@ let package = Package(
             dependencies: ["MapboxCommon", "MapboxCoreMaps"]
         ),
         registry.mapboxCoreMapsTarget(version: version, checksum: checksum),
-    ],
-    cxxLanguageStandard: .cxx14
+    ]
 )
 
 struct SDKRegistry {

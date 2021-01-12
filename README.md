@@ -5,7 +5,7 @@
 Before you can download the Mapbox Core Maps SDK, you need to create a token with `DOWNLOAD:READ` scope.
 Go to https://account.mapbox.com and click "Create token"
 
-##### SPM, CocoaPods and Carthage
+##### SPM
 Insert or append the following to `~/.netrc`
 
 ```bash
