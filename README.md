@@ -18,10 +18,6 @@ machine api.mapbox.com
 
 ##### Swift Package Manager
 
-###### Using Xcode
-
-TODO: Add updated images when repo becomes public
-
 ###### Using SPM Package 📱🖥💻
 
 ```swift
