@@ -21,5 +21,5 @@ machine api.mapbox.com
 ###### Using SPM Package 📱🖥💻
 
 ```swift
-.package(url: "git@github.com:mapbox/mapbox-core-maps-ios.git", from: "10.0.0-beta.4"),
+.package(url: "https://github.com/mapbox/mapbox-core-maps-ios.git", from: "10.0.0-beta.11"),
 ```
