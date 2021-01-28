@@ -12,7 +12,7 @@ Pod::Spec.new do |m|
   m.author = { 'Mapbox' => 'mobile@mapbox.com' }
   m.screenshot = "https://docs.mapbox.com/ios/maps/api/#{version}/img/screenshot.png"
   m.social_media_url = 'https://twitter.com/mapbox'
-  m.documentation_url = 'https://docs.mapbox.com/ios/maps/api/'
+  m.documentation_url = 'https://docs.mapbox.com/ios/beta/maps/guides/install/'
 
   m.source = { http: "https://api.mapbox.com/downloads/v2/mobile-maps-core/releases/ios/packages/#{version.to_s}/MapboxCoreMaps.xcframework.zip" }
 
