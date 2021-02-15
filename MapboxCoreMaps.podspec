@@ -10,7 +10,6 @@ Pod::Spec.new do |m|
   m.homepage = 'https://docs.mapbox.com/ios/maps/'
   m.license = { type: 'Commercial', file: 'LICENSE.md' }
   m.author = { 'Mapbox' => 'mobile@mapbox.com' }
-  m.screenshot = "https://docs.mapbox.com/ios/maps/api/#{version}/img/screenshot.png"
   m.social_media_url = 'https://twitter.com/mapbox'
   m.documentation_url = 'https://docs.mapbox.com/ios/beta/maps/guides/install/'
 
