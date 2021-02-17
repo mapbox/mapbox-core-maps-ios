@@ -61,7 +61,7 @@ extension SDKRegistry {
         return binaryTarget(name: "MapboxCoreMaps",
                             version: version,
                             path: "mobile-maps-core",
-                            filename: "MapboxCoreMaps.xcframework-dynamic.zip",
+                            filename: "MapboxCoreMaps.xcframework.zip",
                             checksum: checksum)
     }
 }
