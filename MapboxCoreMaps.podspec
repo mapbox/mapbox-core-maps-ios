@@ -1,6 +1,6 @@
 Pod::Spec.new do |m|
 
-  version = '10.0.0-rc.7.2'
+  version = '10.0.0-rc.8'
 
   m.name = 'MapboxCoreMaps'
   m.version = version
@@ -22,6 +22,6 @@ Pod::Spec.new do |m|
 
   m.vendored_frameworks = 'MapboxCoreMaps.xcframework'
 
-  m.dependency 'MapboxCommon', '~> 17.1'
+  m.dependency 'MapboxCommon', '~> 18.0'
 
 end
