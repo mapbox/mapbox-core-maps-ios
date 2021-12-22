@@ -1,25 +1,3 @@
-# mapbox-core-maps-ios
+# MapboxCoreMaps
 
-### Prerequisites
-
-Before you can download the Mapbox Core Maps SDK, you need to create a token with `DOWNLOAD:READ` scope.
-Go to https://account.mapbox.com and click "Create token"
-
-##### SPM
-Insert or append the following to `~/.netrc`
-
-```bash
-machine api.mapbox.com
-  login mapbox
-  password <TOKEN WITH DOWNLOAD:READ SCOPE>
-```
-
-## Integration
-
-##### Swift Package Manager
-
-###### Using SPM Package 📱🖥💻
-
-```swift
-.package(url: "git@github.com:mapbox/mapbox-core-maps-ios.git", from: "10.0.0-beta.4"),
-```
+MapboxCoreMaps is the map renderer behind the Mapbox Maps SDK. This repo hosts the manifests for Swift Package Manager and CocoaPods. For more information about the Mapbox Maps SDK for iOS, please visit the main repo at https://github.com/mapbox/mapbox-maps-ios and the documentation at https://docs.mapbox.com/ios/maps/.
