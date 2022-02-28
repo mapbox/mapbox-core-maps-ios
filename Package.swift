@@ -5,8 +5,8 @@ import PackageDescription
 import Foundation
 
 let registry = SDKRegistry()
-let version = "10.4.0-beta.2"
-let checksum = "659ad407695cef205c27997562efee4037c1dabac2a23a6ccc5db81488bbd0bd"
+let version = "10.4.0-rc.1"
+let checksum = "49f1c2abc7a3f5486147c3576a12572e96e75b84580f01f3ba667bb1c3f18aba"
 
 let package = Package(
     name: "MapboxCoreMaps",
@@ -17,7 +17,7 @@ let package = Package(
             targets: ["MapboxCoreMapsWrapper"]),
     ],
     dependencies: [
-        .package(name: "MapboxCommon", url: "https://github.com/mapbox/mapbox-common-ios.git", from: "21.2.0-beta.1"),
+        .package(name: "MapboxCommon", url: "https://github.com/mapbox/mapbox-common-ios.git", from: "21.2.0-rc.1"),
     ],
     targets: [
         .target(
