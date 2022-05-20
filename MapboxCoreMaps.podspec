@@ -22,6 +22,6 @@ Pod::Spec.new do |m|
 
   m.vendored_frameworks = 'MapboxCoreMaps.xcframework'
 
-  m.dependency 'MapboxCommon', '~> 21.3'
+  m.dependency 'MapboxCommon', '~> 22.0.0-beta'
 
 end
