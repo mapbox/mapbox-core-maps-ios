@@ -24,7 +24,7 @@ jobs:
             chmod 0600 ~/.netrc
       - run:
           name: Check SPM manifest
-          command: swift package update
+          command: swift package resolve
       - run:
           name: Check CocoaPods manifest
           command: pod spec lint
