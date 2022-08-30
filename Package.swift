@@ -26,7 +26,7 @@ let package = Package(
         .binaryTarget(
             name: "MapboxCoreMaps",
             url: "https://api.mapbox.com/downloads/v2/mobile-maps-core/releases/ios/packages/\(version)/MapboxCoreMaps.xcframework-dynamic.zip",
-            checksum: checksum,
-        ),
+            checksum: checksum
+        )
     ]
 )
