@@ -5,7 +5,7 @@ import PackageDescription
 import Foundation
 
 let version = "10.8.0-beta.1-internal-0aeed9a73d-SNAPSHOT"
-let checksum = "aeb3859bcecd78700cd12cc754545ef5e48f8451f462e8ef5d0f91239c9846d0"
+let checksum = "ddc801f20a536fdb1bfcd65e5685cdef6c022a1e932cf2b775e028441374a75a"
 
 let package = Package(
     name: "MapboxCoreMaps",
