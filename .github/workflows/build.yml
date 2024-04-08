@@ -1,0 +1,20 @@
+name: Build
+
+on: push
+
+jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Configure .netrc
+        run: |
+          echo "machine api.mapbox.com login mapbox password ${{ secrets.SDK_REGISTRY_TOKEN }}" >> ~/.netrc
+          chmod 0600 ~/.netrc
+
+      - name: Check SPM manifest
+        run: swift package resolve
+
+      - name: Check CocoaPods manifest
+        run: pod spec lint
