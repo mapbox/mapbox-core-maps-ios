@@ -1,0 +1,22 @@
+name: Deploy to CocoaPods
+
+on:
+  push:
+    tags:
+      - '*'
+
+jobs:
+  deploy-to-cocoapods:
+    runs-on: macos-latest
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Configure .netrc
+      run: |
+        echo "machine api.mapbox.com login mapbox password ${{ secrets.SDK_REGISTRY_TOKEN }}" >> ~/.netrc
+        chmod 0600 ~/.netrc
+
+    - name: Deploy to Cocoapods
+      run: pod trunk push
+      env:
+        COCOAPODS_TRUNK_TOKEN: ${{ secrets.COCOAPODS_TRUNK_TOKEN }}
