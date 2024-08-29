@@ -9,19 +9,19 @@ let checksum = ""
 
 let package = Package(
     name: "MapboxCoreMaps",
-    platforms: [.iOS(.v10), .macOS(.v10_15), .custom("visionos", versionString: "1.0")],
+    platforms: [.iOS(.v12), .macOS(.v10_15), .custom("visionos", versionString: "1.0")],
     products: [
         .library(
             name: "MapboxCoreMaps",
             targets: ["MapboxCoreMapsWrapper"]),
     ],
     dependencies: [
-        .package(name: "MapboxCommon", url: "https://github.com/mapbox/mapbox-common-ios.git", from: "24.7.0-alpha.15"),
+        .package(url: "https://github.com/mapbox/mapbox-common-ios.git", from: "24.7.0-alpha.15"),
     ],
     targets: [
         .target(
             name: "MapboxCoreMapsWrapper",
-            dependencies: ["MapboxCommon", "MapboxCoreMaps"]
+            dependencies: [.product(name: "MapboxCommon", package: "mapbox-common-ios"), "MapboxCoreMaps"]
         ),
         .binaryTarget(
             name: "MapboxCoreMaps",
