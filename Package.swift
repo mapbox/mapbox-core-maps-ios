@@ -16,7 +16,7 @@ let package = Package(
             targets: ["MapboxCoreMapsWrapper"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/mapbox/mapbox-common-ios.git", from: "11.7.0-beta.2"),
+        .package(url: "https://github.com/mapbox/mapbox-common-ios.git", from: "24.7.0-beta.2"),
     ],
     targets: [
         .target(
