@@ -4,8 +4,8 @@
 import PackageDescription
 import Foundation
 
-let version = "10.18.0"
-let checksum = "2645d30b18f2da135412e377dc5d1edcf30fda6ec0c61d3e444cdd741729d200"
+let version = "10.19.1"
+let checksum = "00793e19ecee8abd5f1eb59148b7a6cc108e9438b112f62d0bbee0dad1a33b27"
 
 let package = Package(
     name: "MapboxCoreMaps",
@@ -16,7 +16,7 @@ let package = Package(
             targets: ["MapboxCoreMapsWrapper"]),
     ],
     dependencies: [
-        .package(name: "MapboxCommon", url: "https://github.com/mapbox/mapbox-common-ios.git", from: "23.10.0"),
+        .package(name: "MapboxCommon", url: "https://github.com/mapbox/mapbox-common-ios.git", from: "23.11.0"),
     ],
     targets: [
         .target(
