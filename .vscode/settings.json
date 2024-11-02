@@ -1,0 +1,5 @@
+{
+    "circleci.persistedProjectSelection": [
+        "gh/mapbox/mapbox-core-maps-ios"
+    ]
+}

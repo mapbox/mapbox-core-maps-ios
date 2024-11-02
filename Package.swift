@@ -16,12 +16,15 @@ let package = Package(
             targets: ["MapboxCoreMapsWrapper"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/mapbox/mapbox-common-ios.git", from: "24.8.0-rc.1"),
+        .package(url: "https://github.com/mapbox/mapbox-common-ios.git", branch: "sapial/CORESDK-3099/0"),
     ],
     targets: [
         .target(
             name: "MapboxCoreMapsWrapper",
-            dependencies: [.product(name: "MapboxCommon", package: "mapbox-common-ios"), "MapboxCoreMaps"]
+            dependencies: [
+                .product(name: "MapboxCommon", package: "mapbox-common-ios"),
+                "MapboxCoreMaps"
+            ]
         ),
         .binaryTarget(
             name: "MapboxCoreMaps",
