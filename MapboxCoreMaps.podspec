@@ -1,6 +1,6 @@
 Pod::Spec.new do |m|
 
-  version = '11.9.0-sapial-release-naive-sdks-1-daily-2024-11-14-17-16'
+  version = '11.9.0-SNAPSHOT'
 
   m.name = 'MapboxCoreMaps'
   m.version = version
@@ -16,12 +16,12 @@ Pod::Spec.new do |m|
   m.source = { http: "https://api.mapbox.com/downloads/v2/mobile-maps-core/releases/ios/packages/#{version.to_s}/MapboxCoreMaps.xcframework-dynamic.zip" }
 
   m.platform = :ios
-  m.ios.deployment_target = '11.0'
+  m.ios.deployment_target = '12.0'
 
   m.requires_arc = true
 
   m.vendored_frameworks = 'MapboxCoreMaps.xcframework'
 
-  m.dependency 'MapboxCommon', '~> 24.9'
+  m.dependency 'MapboxCommon', '24.9.0-SNAPSHOT'
 
 end
