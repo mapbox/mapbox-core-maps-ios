@@ -1,6 +1,6 @@
 Pod::Spec.new do |m|
 
-  version = '11.10.0-daily-2025-01-31-04-26'
+  version = '11.10.0-daily-2025-02-03-04-26'
 
   m.name = 'MapboxCoreMaps'
   m.version = version
