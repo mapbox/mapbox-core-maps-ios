@@ -3,20 +3,32 @@ name: Deploy to CocoaPods
 on:
   push:
     tags:
-      - '*'
+      - "*"
 
 jobs:
   deploy-to-cocoapods:
     runs-on: macos-latest
     steps:
-    - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-    - name: Configure .netrc
-      run: |
-        echo "machine api.mapbox.com login mapbox password ${{ secrets.SDK_REGISTRY_TOKEN }}" >> ~/.netrc
-        chmod 0600 ~/.netrc
+      - name: Configure .netrc
+        run: |
+          echo "machine api.mapbox.com login mapbox password ${{ secrets.SDK_REGISTRY_TOKEN }}" >> ~/.netrc
+          chmod 0600 ~/.netrc
 
-    - name: Deploy to Cocoapods
-      run: pod trunk push
-      env:
-        COCOAPODS_TRUNK_TOKEN: ${{ secrets.COCOAPODS_TRUNK_TOKEN }}
+      - name: Validate missing CocoaPods spec on trunk
+        run: |
+          PODSPEC_URL="https://cdn.jsdelivr.net/cocoa/Specs/0/6/6/MapboxCoreMaps/${GITHUB_REF_NAME#v}/MapboxCoreMaps.podspec.json"
+          echo "Checking URL: $PODSPEC_URL"
+
+          if curl --silent --fail --head --output /dev/null "$PODSPEC_URL";
+          then
+            echo "Spec already exists on trunk"
+            exit 1
+          else
+            echo "Spec does not exist on trunk"
+          fi
+      - name: Deploy to Cocoapods
+        run: pod trunk push
+        env:
+          COCOAPODS_TRUNK_TOKEN: ${{ secrets.COCOAPODS_TRUNK_TOKEN }}
