@@ -21,7 +21,7 @@ jobs:
           PODSPEC_URL="https://cdn.jsdelivr.net/cocoa/Specs/0/6/6/MapboxCoreMaps/${GITHUB_REF_NAME#v}/MapboxCoreMaps.podspec.json"
           echo "Checking URL: $PODSPEC_URL"
 
-          if curl --silent --fail --head --output /dev/null "$PODSPEC_URL";
+          if curl --location --silent --fail --head --output /dev/null "$PODSPEC_URL";
           then
             echo "Spec already exists on trunk"
             exit 1
