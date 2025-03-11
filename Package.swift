@@ -4,8 +4,10 @@
 import PackageDescription
 import Foundation
 
-let version = "11.11.0-beta.1"
-let checksum = "8f4cd9b072a9a898894a5902c927ef1c21fced9717196a9eac4eba105aff6422"
+let version = "11.11.0-rc.1"
+let checksum = "deb4d950c8e2a3903f21b11ad939de0a71c92dafc917c22e9c6e30854df6ce0a"
+let commonVersion: Version = "24.11.0-rc.1"
+let releaseType = "releases"
 
 let package = Package(
     name: "MapboxCoreMaps",
@@ -16,7 +18,7 @@ let package = Package(
             targets: ["MapboxCoreMapsWrapper"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/mapbox/mapbox-common-ios.git", from: "24.11.0-beta.1"),
+        .package(url: "https://github.com/mapbox/mapbox-common-ios.git", exact: commonVersion),
     ],
     targets: [
         .target(
@@ -25,7 +27,7 @@ let package = Package(
         ),
         .binaryTarget(
             name: "MapboxCoreMaps",
-            url: "https://api.mapbox.com/downloads/v2/mobile-maps-core/releases/ios/packages/\(version)/MapboxCoreMaps.xcframework-dynamic.zip",
+            url: "https://api.mapbox.com/downloads/v2/mobile-maps-core/\(releaseType)/ios/packages/\(version)/MapboxCoreMaps.xcframework-dynamic.zip",
             checksum: checksum
         )
     ]
