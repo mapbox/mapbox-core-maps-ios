@@ -5,7 +5,7 @@ import PackageDescription
 import Foundation
 
 let version = "11.12.0-beta.1"
-let checksum = "05b2f1044f35acc99925bccc8374a7aa5dccbfa08b63f2d93384197f673d1ae0"
+let checksum = "affa904200dac4e8a900ee97e30160192a1b0e9a6e3c61faf9652194a02caa5e"
 let commonVersion: Version = "24.12.0-beta.1"
 let releaseType = "releases"
 
