@@ -16,7 +16,7 @@ Pod::Spec.new do |m|
   m.source = { http: "https://api.mapbox.com/downloads/v2/mobile-maps-core/releases/ios/packages/#{version.to_s}/MapboxCoreMaps.xcframework-dynamic.zip" }
 
   m.platform = :ios
-  m.ios.deployment_target = '12.0'
+  m.ios.deployment_target = '14.0'
   m.swift_version = '5.7'
 
   m.requires_arc = true
